@@ -14,5 +14,10 @@ use App\Http\Controllers\BookController;
 |
 */
 
-Route::get('/', [BookController::class, 'index']);
-Route::post('/book', [BookController::class, 'add'])->name('book.create');
+Route::get('/', [BookController::class, 'index'])->name('home');
+Route::post('/book', [BookController::class, 'add'])->name('create');
+Route::get('/book', [BookController::class, 'list'])->name('table');
+Route::get('/book/edit/{id}', [BookController::class, 'edit'])->name('modify');
+Route::patch('/book/{id}', [BookController::class, 'update'])->name('updated');
+Route::delete('/book/{id}', [BookController::class, 'delete'])->name('erase');
+

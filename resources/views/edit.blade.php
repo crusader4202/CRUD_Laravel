@@ -19,21 +19,24 @@
     </head>
     <body class="antialiased">
         <div class="container">
-            <form action="{{route('create')}}" method="POST">
+            <h1 class="center">Update</h1>
+            <a href="{{route('home')}}"><button class="btn btn-primary">Home</button></a>
+            <form action="{{route('updated', $Book->id)}}" method="POST">
             @csrf
-                <div class="mb-3">
+            @method('PATCH')
+            <div class="mb-3">
                   <label class="form-label">Book Name</label>
-                  <input name="name" class="form-control">
+                  <input name="name" class="form-control" value="{{$Book->name}}">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Author</label>
-                    <input name="author" class="form-control">
+                    <input name="author" class="form-control" value="{{$Book->author}}">
                   </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Year</label>
-                  <input name="year" class="form-control" type="number">
+                  <input name="year" class="form-control" type="number" value="{{$Book->year}}">
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary">Update</button>
               </form>
               <a href="{{route('table')}}"><button class="btn btn-primary">Table</button></a>
         </div>

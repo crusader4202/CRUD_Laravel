@@ -34,7 +34,6 @@
                   <input name="book_year" class="form-control" type="number">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <button type="list" class="btn btn-primary">List</button>
               </form>
         </div>
     </body>

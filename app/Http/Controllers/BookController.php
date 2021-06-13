@@ -11,11 +11,11 @@ class BookController extends Controller
         return view('welcome');
     }
 
-    public function addBook(Request $request) {
+    public function add(Request $request) {
         Book::create([
-            'name' => $request->book_name,
-            'author' => $request->book_author,
-            'year' => $request->book_year,
+            'name' => $request->name,
+            'author' => $request->author,
+            'year' => $request->year
         ]);
         return redirect('/');
     }

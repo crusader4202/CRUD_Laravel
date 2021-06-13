@@ -15,4 +15,4 @@ use App\Http\Controllers\BookController;
 */
 
 Route::get('/', [BookController::class, 'index']);
-Route::post('/book',[BookController::class, 'addBook'])->name('book.create');
+Route::post('/book', [BookController::class, 'add'])->name('book.create');

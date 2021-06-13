@@ -23,15 +23,15 @@
             @csrf
                 <div class="mb-3">
                   <label class="form-label">Book Name</label>
-                  <input name="book_name" class="form-control">
+                  <input name="name" class="form-control">
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Author</label>
-                    <input name="book_author" class="form-control">
+                    <input name="author" class="form-control">
                   </div>
                 <div class="mb-3">
                   <label for="exampleInputPassword1" class="form-label">Year</label>
-                  <input name="book_year" class="form-control" type="number">
+                  <input name="year" class="form-control" type="number">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>

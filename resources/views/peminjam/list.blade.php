@@ -14,29 +14,17 @@
           <tr>
             <th scope="col">ID</th>
             <th scope="col">Name</th>
-            <th scope="col">Author</th>
-            <th scope="col">Year</th>
-            <th scope="col">Peminjam</th>
-            <th scope="col">Buttons</th>
+            <th scope="col">NIM</th>
+            <th scope="col">Employee</th>
           </tr>
         </thead>
         <tbody>
-            @foreach($books as $Book)
+            @foreach($peminjams as $Book)
                 <tr>
                     <th scope="row">{{$Book->id}}</th>
                     <td>{{$Book->name}}</td>
-                    <td>{{$Book->author}}</td>
-                    <td>{{$Book->year}}</td>
-                    <td>{{$Book->peminjam->name}}</td> 
-                      
-                    <td>
-                        <a href="{{route('modify', $Book->id)}}" class="btn btn-success">edit</a>
-                        <form action="{{route('erase', $Book->id)}}" method="POST">
-                            @csrf
-                            @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Delete</button>
-                        </form>
-                    </td>                
+                    <td>{{$Book->NIM}}</td>
+                    <td>{{$Book->employee}}</td>              
                 </tr>
             @endforeach
         </tbody>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BookController;
+use App\Http\Controllers\PeminjamController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +21,7 @@ Route::get('/book', [BookController::class, 'list'])->name('table');
 Route::get('/book/edit/{id}', [BookController::class, 'edit'])->name('modify');
 Route::patch('/book/{id}', [BookController::class, 'update'])->name('updated');
 Route::delete('/book/{id}', [BookController::class, 'delete'])->name('erase');
+Route::get('/peminjam/insert',[PeminjamController::class,'insert'])->name('peminjam.create');
+Route::post('/peminjam/add',[PeminjamController::class,'add'])->name('peminjam.add');
+Route::get('/peminjam',[PeminjamController::class,'index'])->name('peminjam.list');
 

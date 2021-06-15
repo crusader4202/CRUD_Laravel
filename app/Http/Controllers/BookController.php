@@ -4,11 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Book;
+use App\Models\Peminjam;
 
 class BookController extends Controller
 {
     public function index() {
-        return view('welcome');
+        $peminjams = Peminjam::all();
+        return view('welcome', compact('peminjams'));
     }
 
     public function add(Request $request) {

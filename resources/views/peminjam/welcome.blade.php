@@ -19,27 +19,19 @@
     </head>
     <body class="antialiased">
         <div class="container">
-            <form action="{{route('create')}}" method="POST">
+            <form action="{{route('peminjam.add')}}" method="POST">
             @csrf
                 <div class="mb-3">
-                  <label class="form-label">Book Name</label>
+                  <label class="form-label">Peminjam Name</label>
                   <input name="name" class="form-control">
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Author</label>
-                    <input name="author" class="form-control">
+                    <label class="form-label">NIM</label>
+                    <input name="NIM" class="form-control">
                   </div>
                 <div class="mb-3">
-                  <label for="exampleInputPassword1" class="form-label">Year</label>
-                  <input name="year" class="form-control" type="number">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Peminjam name</label>
-                    <select name="peminjam_id" class="form-control">
-                        @foreach($pinjamans as $peminjam)
-                            <option value='{{peminjam->id}}'>{{peminjam->name}}</option>
-                        @endforeach
-                    </select>
+                    <label class="form-label">Employee Name</label>
+                    <input name="employee" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>

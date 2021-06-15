@@ -10,4 +10,8 @@ class Book extends Model
     use HasFactory;
 
     protected $fillable = ['name', 'author', 'year'];
+
+    public function peminjam(){
+        return $this->belongsTo(Peminjam::class);
+    }
 }
